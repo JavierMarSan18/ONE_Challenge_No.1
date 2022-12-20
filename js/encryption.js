@@ -2,6 +2,7 @@ let inputText = document.getElementById('input-text');
 let outputText = document.getElementById('output-text');
 let btnEnc = document.getElementById('btn-enc');
 let btnDes = document.getElementById('btn-des');
+let btnCopy = document.getElementById('btn-copy');
 
 let words = ['ai', 'enter', 'imes', 'ober', 'ufat'];
 let vowels = ['a', 'e', 'i', 'o', 'u'];
@@ -34,12 +35,17 @@ let decrypt = () => {
 }
 
 let loadEncryptedWord = () => {
-    outputText.innerHTML = encrypt();
+    outputText.value = encrypt();
 }
 
 let loadDecryptedWord = () => {
-    outputText.innerHTML = decrypt();
+    outputText.value = decrypt();
+}
+
+let copyToClipboard = () => {
+    navigator.clipboard.writeText(outputText.value);
 }
 
 btnEnc.onclick = loadEncryptedWord;
 btnDes.onclick = loadDecryptedWord;
+btnCopy.onclick = copyToClipboard;
