@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Encriptador</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="./img//Logo.png" alt="Logo de Alura" />
+      </div>
+    </header>
+    <main>
+      <section class="encryption">
+        <div class="main-container">
+
+            <div class="form-container">
+                <form>
+                    <div class="input-text-container">
+                      <input id="input-text" type="text" placeholder="Ingrese el texto aquí"/>
+                    </div>
+                </form>
+                <button id="btn-enc">Encriptar</button>
+                <button id="btn-des">Desencriptar</button>
+            </div>
+
+              <div class="output-text-container">
+                <div id="output-text">Salida de texto</div>
+                <button id="btn-copy">Copiar</button>
+              </div>
+
+          </div>
+      </section>
+    </main>
+
     <script src="js/main.js"></script>
-</body>
+    <script src="js/encryption.js"></script>
+  </body>
 </html>
