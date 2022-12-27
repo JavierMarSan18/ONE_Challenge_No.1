@@ -55,7 +55,7 @@ main{
 }
 
 .message-container{
-    display: flex; /*Por defecto al cargar la página es flex*/
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -76,7 +76,7 @@ main{
 }
 
 .output-text-container{
-    display: none; /*Se cambia a flex cuando se presiona encriptar*/
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
@@ -167,16 +167,28 @@ footer{
     align-items: center;
 }
 
+.developer-info{
+    text-align: center;
+}
+
+.logo-media-container{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-media-container a{
+    color: inherit;
+}
+
+.logo-media-container i{
+    font-size: 1.5em;
+    margin: 0 .2em;
+}
+
 
 @media screen and (max-width:768px) {
-
-    main{
-        overflow-y: scroll;
-        padding: 0;
-    }
-    
     .encryption{
-        display: inline-block;
+        flex-direction: column;
         width: 100%;
         height: auto;
     }

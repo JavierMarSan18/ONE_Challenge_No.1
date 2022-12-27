@@ -12,10 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/072cdf2a50.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Encriptador</title>
   </head>
   <body>
-    
     <header>
       <div class="logo-container">
         <img id="logo" src="./img/Logo.svg" alt="" />
@@ -51,33 +54,48 @@
           </div>
         </div>
 
-        <div class="output-container"> 
-          
-        <div class="message-container">
-          <img
-            src="./img/illustration.svg"
-            alt="Persona mirando un diamante con una lupa."/>
-          <div class="message">
-            <h2>Ningún mensaje fue encontrado</h2>
-            <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+        <div class="output-container">
+          <div class="message-container" id="message-container">
+            <img
+              src="./img/illustration.svg"
+              alt="Persona mirando un diamante con una lupa."
+            />
+            <div class="message">
+              <h2>Ningún mensaje fue encontrado</h2>
+              <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+            </div>
           </div>
-        </div>
 
-          <div class="output-text-container">
-            <textarea id="output-text" ></textarea>
+          <div class="output-text-container" id="output-text-container">
+            <textarea id="output-text" readonly></textarea>
             <div class="btn-container output-btn-container">
               <input class="btn" id="btn-copy" type="button" value="Copiar" />
             </div>
           </div>
-
         </div>
       </section>
     </main>
     <footer>
-      <p class="copyright">&copy; Copyright Javier Marroquín - 2022</p>
+      <div class="developer-info">
+        <p class="copyright">&copy; Copyright Javier Marroquín - 2022</p>
+        <div class="logo-media-container">
+          <a
+            href="https://github.com/JavierMarSan18"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/javiermarsan-dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
     </footer>
 
-    <script src="./js/main.js"></script>
     <script src="./js/encryption.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
