@@ -6,36 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Encriptador</title>
   </head>
   <body>
+    
     <header>
       <div class="logo-container">
-        <img src="./img//Logo.png" alt="Logo de Alura" />
+        <img id="logo" src="img/Logo.svg" alt="" />
       </div>
     </header>
     <main>
       <section class="encryption">
-        <div class="main-container">
-
-            <div class="form-container">
-                <form>
-                    <div class="input-text-container">
-                      <input id="input-text" type="text" placeholder="Ingrese el texto aquí"/>
-                    </div>
-                </form>
-                <button id="btn-enc">Encriptar</button>
-                <button id="btn-des">Desencriptar</button>
-            </div>
-
-              <div class="output-text-container">
-                <input id="output-text" type="text">
-                <button id="btn-copy">Copiar</button>
-              </div>
-
+        <div class="input-container">
+          <textarea
+            id="input-text"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+          <div class="warning-container">
+            <img
+              src="./img/exclamation-circle-solid.svg"
+              alt="Signo de exclamación"
+            />
+            <p>Solo letras minúsculas y sin acentos.</p>
           </div>
+          <div class="btn-container input-btn-container">
+            <input
+              class="btn"
+              id="btn-encrypt"
+              type="button"
+              value="Encriptar"
+            />
+            <input
+              class="btn"
+              id="btn-decrypt"
+              type="button"
+              value="Desencriptar"
+            />
+          </div>
+        </div>
+
+        <div class="output-container"> 
+          
+        <div class="message-container">
+          <img
+            src="img/illustration.svg"
+            alt="Persona mirando un diamante con una lupa."/>
+          <div class="message">
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+          </div>
+        </div>
+
+          <div class="output-text-container">
+            <textarea id="output-text" ></textarea>
+            <div class="btn-container output-btn-container">
+              <input class="btn" id="btn-copy" type="button" value="Copiar" />
+            </div>
+          </div>
+
+        </div>
       </section>
     </main>
+    <footer>
+      <p class="copyright">&copy; Copyright Javier Marroquín - 2022</p>
+    </footer>
 
     <script src="js/main.js"></script>
     <script src="js/encryption.js"></script>

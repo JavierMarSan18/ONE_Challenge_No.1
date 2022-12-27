@@ -1,4 +1,242 @@
-body{
-    /* background-color: #E5E5E5; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Montserrat:wght@300&display=swap');
+
+html, body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-content: space-between;
 }
 
+
+header{
+    height: 10vh;
+    box-shadow: 0 1px 1px rgb(219, 217, 217);
+}
+
+main{
+    height: 80vh;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.logo-container{
+    height: 100%;
+    display: flex;
+}
+
+.logo-container > img{
+    margin: 1%;
+}
+
+.encryption{
+    height: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1% 0;
+}
+
+.input-container, .output-container{
+    border-radius: 20px;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container{
+    justify-content: space-between;
+    width: 60%;
+}
+
+.output-container{
+    width: 25%;
+    background-color: #FFFFFF;
+    box-shadow: 1px 5px 15px 1px rgb(231, 226, 226);
+    justify-content: center;
+}
+
+.message-container{
+    display: flex; /*Por defecto al cargar la página es flex*/
+    flex-direction: column;
+    justify-content: center;
+}
+
+.message-container > img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.message{
+    text-align: center;
+}
+
+.message > h2{
+    font-size: 1.5em;
+    padding: 0.5em 0;
+    font-weight: bold;
+}
+
+.output-text-container{
+    display: none; /*Se cambia a flex cuando se presiona encriptar*/
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#input-text, #output-text{
+    outline: none;
+    resize: none;
+    height: 100%;
+    font-family: inherit;
+    font-weight: bold;
+    border: none;
+}
+
+#input-text{
+    background-color: inherit;
+    font-size: 2em;
+    color: #0A3871;
+}
+
+#input-text::placeholder{
+    color: #0A3871;
+}
+
+#output-text{
+    font-size: 1.5em;
+
+}
+
+.warning-container{
+    display: flex;
+    align-items: center;
+    padding: 0.6em 0;
+    font-size: 0.9em;
+}
+
+.warning-container > img{
+    width: 1em;
+    margin-right: 0.5em;
+}
+
+.btn-container{
+    display: flex;
+}
+
+.input-btn-container{
+    justify-content: space-between;
+}
+
+.output-btn-container{
+    justify-content: center;
+}
+
+.btn{
+    font-size: 1em;
+    width: 20em;
+    height: 4em;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+}
+
+#btn-encrypt{
+    background-color: #0A3871;
+    color: #FFFFFF;
+    margin-right: 5%;
+}
+
+#btn-encrypt:hover{
+    background-color: #0f4f9d;
+    transition-duration: .2s;
+}
+
+#btn-decrypt{
+    margin-left: 5%;
+}
+
+#btn-decrypt, #btn-copy{
+    background-color: inherit;
+    color: #0A3871;
+}
+
+footer{
+    height: 10vh;
+    background-color: #0A3871;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width:768px) {
+
+    main{
+        overflow-y: scroll;
+        padding: 0;
+    }
+    
+    .encryption{
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+
+    .input-container, .output-container{
+        margin: 5% auto;
+        width: 80%;
+    }
+
+    .input-container{
+        height: 60%;
+    }
+
+    .message-container > img{
+        display: none;
+    }
+
+    .output-text-container{
+        justify-content: space-evenly;
+    }
+
+    #input-text{
+        height: 10em;
+    }
+
+    #output-text{
+        height: 7em;
+    }
+
+    #btn-encrypt, #btn-decrypt{
+        margin: 0;
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .logo-container > img{
+        margin: 1% auto;
+    }
+
+    .btn-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .btn{
+        width: 100%;
+    }
+
+    #input-text{
+        height: 8em;
+    }
+
+    #output-text{
+        height: 7em;
+    }
+
+    #btn-encrypt, #btn-decrypt{
+        margin: 2% 0;
+        width: 100%;
+    }
+}
