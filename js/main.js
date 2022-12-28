@@ -41,27 +41,26 @@ let loadWordToOutputText = (word) => {
 };
 
 
+let processWord = (action) => {
+    let word = getWordFromInputText();
+
+    if(word != ""  && isLowerCase(word)){
+        toggleOutputContainer();
+        let proccessedWord = action(word);
+        loadWordToOutputText(proccessedWord);
+    }
+}
+
+
 //Se agregan eventos a los botones
 //Encripta la cadena y la carga al contenedor de salida
 btnEncrypt.addEventListener('click', () => {
-    let word = getWordFromInputText();
-
-    if(isLowerCase(word)){
-        toggleOutputContainer();
-        let encryptedWord = encrypt(word);
-        loadWordToOutputText(encryptedWord);
-    }
+    processWord(encrypt);
 });
 
 //Desencripta la cadena y la carga al contenedor de salida
 btnDecrypt.addEventListener('click', () => {
-    let word = getWordFromInputText();
-
-    if(isLowerCase(word)){
-        toggleOutputContainer();
-        let decryptedWord = decrypt(word);
-        loadWordToOutputText(decryptedWord);
-    }
+    processWord(decrypt);
 })
 
 //Copia la cadena al clipboard
